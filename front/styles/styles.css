@@ -1,0 +1,106 @@
+.header1{
+    color: #B08A6B;
+    font-size: 48px;
+    font-family: "Rota", sans-serif;
+}
+
+.header2{
+    color: #B08A6B;
+    font-size: 40px;
+    font-family: "Rota", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 0px 36px 0px;
+
+}
+
+.body1{
+    color: #222F39;
+    font-size: 20px;
+    font-family: "Rota", serif;
+}
+
+.body2{
+    color: #222F39;
+    font-size: 16px;
+    font-family: "Rota", serif;
+}
+
+body{
+    padding: 0px 96px 0px 96px;
+    background-color: #2F424F;
+}
+
+.button{
+    background-color: #F0EEEF;
+    color: #222F39;
+    font-size: 20px;
+    font-family: "Rota", serif;
+    padding: 8px 24px 8px 24px;
+    border-radius: 36px;
+    width: auto;
+    transition: 1s;
+}
+.button:hover{
+    background-color: #B08A6B;
+    color: #222F39;
+}
+
+header{
+    padding: 24px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#moviesRecomendas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.AboutUs{
+    background-color: #F0EEEF;
+    padding: 24px 36px 24px 36px;
+    border-radius: 36px;
+}
+
+.cardMovie{
+    background-color: #F0EEEF;
+    padding: 24px 36px 24px 36px;
+    border-radius: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.titlemovie{
+    font-size: 20px;
+    font-family: "Rota", serif;
+    color: #222F39;
+}
+
+.descriptionBox{
+    background-color: #B08A6B;
+    padding: 16px 8px 16px 8px;
+    border-radius: 36px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descriptionMovie{
+    font-size: 16px;
+    font-family: "Rota", serif;
+    color: #2F424F;
+}
+
+.poster{
+    height: 150px;
+    width: 120px;
+}
