@@ -27,6 +27,12 @@
     font-family: "Rota", serif;
 }
 
+.body3{
+    color: #435E71;
+    font-size: 16px;
+    font-family: "Rota", serif;
+}
+
 body{
     padding: 0px 96px 0px 96px;
     background-color: #2F424F;
@@ -78,15 +84,15 @@ header{
 }
 
 .titlemovie{
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Rota", serif;
     color: #222F39;
 }
 
 .descriptionBox{
     background-color: #B08A6B;
-    padding: 16px 8px 16px 8px;
-    border-radius: 36px;
+    padding: 16px 16px 16px 16px;
+    border-radius: 16px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -101,6 +107,6 @@ header{
 }
 
 .poster{
-    height: 150px;
-    width: 120px;
+    height: 250px;
+    width: 200px;
 }
