@@ -110,3 +110,10 @@ header{
     height: 250px;
     width: 200px;
 }
+
+.errorMessage{
+    background-color:#ff0000;
+    color:#222F39;
+    padding: 24px 36px 24px 36px;
+    border-radius: 36px;
+}

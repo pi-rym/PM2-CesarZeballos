@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest --watchAll"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cesar Zeballos",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^29.7.0",
     "live-server": "^1.2.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
   }
 }
