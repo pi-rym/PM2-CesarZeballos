@@ -1,4 +1,5 @@
 const Movie = require("./movies");
+const axios = require("axios");
 
 class Repository {
     constructor() {
@@ -47,37 +48,21 @@ class Repository {
     }
 
     addMovie() {
-        $.get(`https://students-api.up.railway.app/movies`, (data, status) => {
-            data.forEach(movie => {
-                this.crearMovie(movie);
-                console.log(movie);
-            });
-            this.refresh();
-        });
+        const fetchMovies = async () => {
+            try {
+                const promise = await axios.get("https://students-api.up.railway.app/movies");
+                const data = promise.data;
+                data.forEach(movie => {
+                    this.crearMovie(movie);
+                });
+                this.refresh();
+            } catch (err) {
+                console.error(errorMessageCard);
+            };
+        };
+
+        fetchMovies();
     };
-}
+};
 
 module.exports = Repository;
-
-
-        // const fetchMovies = async () => {
-        //     try {
-        //         const promise = await axios.get("https://students-api.2.us-1.fl0.io/movies");
-        //         const data = promise.data;
-        //         data.forEach(movie => {
-        //             this.crearMovie(movie);
-        //         });
-        //         this.refresh();
-        //     } catch (err) {
-        //         const errorMessageCard = document.createElement('div');
-        //         const errorMessage = document.createElement('p');
-
-        //         card.classList.add('errorMessage');
-
-        //         errorMessage.textContent = err.message;
-
-        //         errorMessageCard.appendChild(errorMessage);
-        //     };
-        // };
-
-        // fetchMovies();
