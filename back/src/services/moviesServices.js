@@ -6,10 +6,15 @@ module.exports = {
     getMovies: async () => {
       try {
         const data = await Movie.find();
-        // const { data } = await axios.get("https://students-api.up.railway.app/movies");
         return data;
       } catch (err) { 
         throw new error(err)
       };
-    }
+    },
+
+    createMovie: async (movie) => {
+      const newMovie = await Movie.create(movie);
+      return newMovie;
+    },
+
 };

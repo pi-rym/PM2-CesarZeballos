@@ -13,6 +13,13 @@ const allMovies = async (req, res) => {
     };
 };
 
+const addMovie = async (req, res) => {
+        const {title, year, director, duration, genre, rate, poster} = req.body;
+        const newMovie = await moviesServices.createMovie({title, year, director, duration, genre, rate, poster});
+        res.status(201).json(newMovie);
+};
+
 module.exports = {
     allMovies,
+    addMovie,
 }

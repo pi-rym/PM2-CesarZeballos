@@ -50,7 +50,7 @@ class Repository {
     addMovie() {
         const fetchMovies = async () => {
             try {
-                const promise = await axios.get("https://students-api.up.railway.app/movies");
+                const promise = await axios.get("http://localhost:3000/movies");
                 const data = promise.data;
                 data.forEach(movie => {
                     this.crearMovie(movie);
@@ -63,6 +63,7 @@ class Repository {
 
         fetchMovies();
     };
+
 };
 
-module.exports = Repository;
+module.exports = Repository

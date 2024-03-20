@@ -1,0 +1,14 @@
+{
+  "name": "challenge-testing",
+  "version": "1.0.0",
+  "description": "Homework n5 - testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "Cesar Zeballos",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}

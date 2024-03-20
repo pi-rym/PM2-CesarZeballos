@@ -8,6 +8,8 @@ class Movie {
         this.rate = rate;
         this.poster = poster;
     }
+
+    
 }
 
 module.exports = Movie;
