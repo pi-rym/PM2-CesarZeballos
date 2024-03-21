@@ -9,7 +9,7 @@ class CarritoCompra {
 
     calcularTotal() {
         let total = 0;
-        for (const item of carrito) {
+        for (const item of this.carrito) {
             total += item.precio * item.cantidad
         };
 
@@ -19,12 +19,13 @@ class CarritoCompra {
     aplicarDescuento(porcentaje) {
 
         const subtotal = this.calcularTotal();
-        const descuento = this.calcularTotal() * (porcentaje/ 100)
+        const descuento = subtotal * (porcentaje / 100);
 
         const total = subtotal - descuento;
-
+        
         return total;
-   };
+    };
+    
 };
 
 module.exports = CarritoCompra;
