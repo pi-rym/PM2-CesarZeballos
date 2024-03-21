@@ -53,6 +53,10 @@ function handlerSubmit(event) {
 
     if(![title.value, year.value, director.value, duration.value, poster.value, genres].every(Boolean)) return alert('Faltan campor por completar')
 
+    const movie = new Movie(title.value, year.value, director.value, duration.value, arrayGenres(), rate.value, poster.value);
+
+    postMovie(movie);
+
     return alert('Pelicula agregada')
 }
 
@@ -73,6 +77,29 @@ function cleanInputs() {
 }
 
 renderGenres()
+
+function arrayGenres() {
+    const checkboxes = document.querySelectorAll('input[name="genre[]"]')
+    const genres = [];
+
+    for (const item of checkboxes) {
+        if(item.checked){
+            item.classList.add("selected")
+            genres.push(item.id);
+        }
+    }
+
+    return genres;
+}
+
+const postMovie = async (movie) => {
+    try {
+        const promise = await axios.post("http://localhost:3000/movies", movie);
+        console.log(promise)
+    } catch (err) {
+        console.error(err);
+    }
+}
 
 agregar.addEventListener('click', handlerSubmit);
 clean.addEventListener('click', cleanInputs);

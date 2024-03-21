@@ -57,7 +57,7 @@ class Repository {
                 });
                 this.refresh();
             } catch (err) {
-                console.error(errorMessageCard);
+                console.error(err);
             };
         };
 
